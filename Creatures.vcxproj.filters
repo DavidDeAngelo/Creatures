@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="examples">
+      <UniqueIdentifier>{559D924D-4FAB-3D4F-975B-4214FDDAB265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\ThirdPartyLibs">
+      <UniqueIdentifier>{CF180AD9-D62B-9545-8D18-297848C846C9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\ThirdPartyLibs\Glew">
+      <UniqueIdentifier>{64F90EDE-A909-1C40-A95E-933F70572C7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\StandaloneMain">
+      <UniqueIdentifier>{8CF29A5D-971A-1647-88CE-9AD27E877634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\ExampleBrowser">
+      <UniqueIdentifier>{682C99C0-C1F5-ED4A-8278-6EC1A871E7C9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\Utils">
+      <UniqueIdentifier>{4B11749A-9F15-3546-B67A-34009375EEE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\Creatures">
+      <UniqueIdentifier>{79839BF9-EF5E-1941-8A43-2E573F4979D6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Creatures\BasicExample.h" />
+    <ClInclude Include="src\Creatures\RagDoll.h" />
+    <ClInclude Include="src\Creatures\Robot.h" />
+    <ClInclude Include="src\Utils\b3Clock.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Creatures\BasicExample.cpp" />
+    <ClCompile Include="src\Creatures\RagDoll.cpp" />
+    <ClCompile Include="src\Creatures\Robot.cpp" />
+    <ClCompile Include="src\ThirdPartyLibs\Glew\glew.c" />
+    <ClCompile Include="src\StandaloneMain\main_opengl_single_example.cpp" />
+    <ClCompile Include="src\ExampleBrowser\OpenGLGuiHelper.cpp" />
+    <ClCompile Include="src\ExampleBrowser\GL_ShapeDrawer.cpp" />
+    <ClCompile Include="src\ExampleBrowser\CollisionShape2TriangleMesh.cpp" />
+    <ClCompile Include="src\Utils\b3Clock.cpp" />
+  </ItemGroup>
+</Project>
