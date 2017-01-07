@@ -24,20 +24,46 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Creatures\BasicExample.h" />
-    <ClInclude Include="src\Creatures\RagDoll.h" />
-    <ClInclude Include="src\Creatures\Robot.h" />
-    <ClInclude Include="src\Utils\b3Clock.h" />
+    <ClInclude Include="src\Utils\b3Clock.h">
+      <Filter>examples\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Creatures\BasicExample.h">
+      <Filter>examples\Creatures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Creatures\Robot.h">
+      <Filter>examples\Creatures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Creatures\RagDoll.h">
+      <Filter>examples\Creatures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Creatures\BasicExample.cpp" />
-    <ClCompile Include="src\Creatures\RagDoll.cpp" />
-    <ClCompile Include="src\Creatures\Robot.cpp" />
-    <ClCompile Include="src\ThirdPartyLibs\Glew\glew.c" />
-    <ClCompile Include="src\StandaloneMain\main_opengl_single_example.cpp" />
-    <ClCompile Include="src\ExampleBrowser\OpenGLGuiHelper.cpp" />
-    <ClCompile Include="src\ExampleBrowser\GL_ShapeDrawer.cpp" />
-    <ClCompile Include="src\ExampleBrowser\CollisionShape2TriangleMesh.cpp" />
-    <ClCompile Include="src\Utils\b3Clock.cpp" />
+    <ClCompile Include="src\Utils\b3Clock.cpp">
+      <Filter>examples\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Creatures\BasicExample.cpp">
+      <Filter>examples\Creatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Creatures\Robot.cpp">
+      <Filter>examples\Creatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Creatures\RagDoll.cpp">
+      <Filter>examples\Creatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ThirdPartyLibs\Glew\glew.c">
+      <Filter>examples\ThirdPartyLibs\Glew</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ExampleBrowser\CollisionShape2TriangleMesh.cpp">
+      <Filter>examples\ExampleBrowser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StandaloneMain\main_opengl_single_example.cpp">
+      <Filter>examples\StandaloneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ExampleBrowser\OpenGLGuiHelper.cpp">
+      <Filter>examples\ExampleBrowser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ExampleBrowser\GL_ShapeDrawer.cpp">
+      <Filter>examples\ExampleBrowser</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

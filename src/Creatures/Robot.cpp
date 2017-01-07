@@ -25,7 +25,9 @@ Robot::Robot(btDynamicsWorld* ownerWorld, const btVector3& positionOffset, btSca
 	transform.setIdentity();
 	transform.setOrigin(scale*btVector3(btScalar(1.), btScalar(.6), btScalar(1.)));
 	createBox(10, offset*transform, *box, 1);
+
 	deleteObject(1);
+	createBox(10, offset*transform, *box, 1);
 	btTransform  trans = offset*transform;
 
 	btScalar x = trans.getOrigin().getX();
