@@ -12,6 +12,22 @@ subject to the following restrictions:
 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source distribution.
 */
+#include<vld.h>
+
+/*
+#define _CRTDBG_MAP_ALLOC
+#include <cstdlib>
+#include <crtdbg.h>
+
+#ifdef _DEBUG
+#define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
+// Replace _NORMAL_BLOCK with _CLIENT_BLOCK if you want the
+// allocations to be of _CLIENT_BLOCK type
+#else
+#define DBG_NEW new
+#endif
+*/
+
 
 
 
@@ -72,13 +88,14 @@ public:
 };
 int main(int argc, char* argv[])
 {
+	/*
 	std::random_device r;
 	std::default_random_engine e1(r());
 	std::uniform_int_distribution<int> uniform_dist(-10, 10);
 	int mean = uniform_dist(e1);
+	*/
 
-
-	SimpleOpenGL3App* app = new SimpleOpenGL3App("Bullet Standalone Example",1024,768,true);
+	SimpleOpenGL3App* app = new SimpleOpenGL3App("Creatures",1024,768,true);
 	
 	prevMouseButtonCallback = app->m_window->getMouseButtonCallback();
 	prevMouseMoveCallback = app->m_window->getMouseMoveCallback();
@@ -91,12 +108,25 @@ int main(int argc, char* argv[])
 	//DummyGUIHelper gui;
 
 	CommonExampleOptions options(&gui);
-
+	
+	for (int i = 0; i < 10; i++){
+		example = StandaloneExampleCreateFunc(options);
+		example->initPhysics();
+		example->resetCamera();
+		example->exitPhysics();
+		delete example;
+		
+	}
+	
 	example = StandaloneExampleCreateFunc(options);
 	example->initPhysics();
 	example->resetCamera();
 
+
 	
+
+
+
 	b3Clock clock;
 
 	do
@@ -121,6 +151,9 @@ int main(int argc, char* argv[])
 	example->exitPhysics();
 	delete example;
 	delete app;
+/*memory leak code*/
+	//_CrtDumpMemoryLeaks();
+
 	return 0;
 }
 

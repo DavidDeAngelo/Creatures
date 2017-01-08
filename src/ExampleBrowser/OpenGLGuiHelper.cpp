@@ -356,6 +356,11 @@ void OpenGLGuiHelper::createPhysicsDebugDrawer(btDiscreteDynamicsWorld* rbWorld)
 
 }
 
+void OpenGLGuiHelper::removeCurrentPhysicsDebugDrawer() {
+	delete m_data->m_debugDraw;
+	m_data->m_debugDraw = 0;
+}
+
 struct Common2dCanvasInterface*	OpenGLGuiHelper::get2dCanvasInterface()
 {
 	return m_data->m_glApp->m_2dCanvasInterface;

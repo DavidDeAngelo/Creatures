@@ -28,7 +28,7 @@ struct GUIHelperInterface
 	virtual void render(const btDiscreteDynamicsWorld* rbWorld)=0;
 
 	virtual void createPhysicsDebugDrawer( btDiscreteDynamicsWorld* rbWorld)=0;
-
+	virtual void removeCurrentPhysicsDebugDrawer() = 0;
 	virtual int	registerTexture(const unsigned char* texels, int width, int height)=0;
 	virtual int registerGraphicsShape(const float* vertices, int numvertices, const int* indices, int numIndices,int primitiveType, int textureId) = 0;
 	virtual int registerGraphicsInstance(int shapeIndex, const float* position, const float* quaternion, const float* color, const float* scaling) =0;

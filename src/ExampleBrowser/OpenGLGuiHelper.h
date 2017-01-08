@@ -33,6 +33,8 @@ struct OpenGLGuiHelper : public GUIHelperInterface
 	virtual void render(const btDiscreteDynamicsWorld* rbWorld);
 
 	virtual void createPhysicsDebugDrawer(btDiscreteDynamicsWorld* rbWorld);
+	
+	virtual void removeCurrentPhysicsDebugDrawer();
 
 	virtual struct Common2dCanvasInterface*	get2dCanvasInterface();
 
