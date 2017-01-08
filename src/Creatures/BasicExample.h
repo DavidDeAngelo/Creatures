@@ -16,6 +16,31 @@ subject to the following restrictions:
 #ifndef BASIC_EXAMPLE_H
 #define BASIC_EXAMPLE_H
 
+#include "BasicExample.h"
+#include "RagDoll.h"
+#include "Robot.h"
+#include <memory>
+
+#include "btBulletDynamicsCommon.h"
+
+#include "LinearMath/btVector3.h"
+#include "LinearMath/btAlignedObjectArray.h"
+
+#include "../CommonInterfaces/CommonRigidBodyBase.h"
+
+struct BasicExample : public CommonRigidBodyBase
+{
+
+	BasicExample(struct GUIHelperInterface* helper);
+	virtual ~BasicExample();
+	virtual void initPhysics();
+	virtual void renderScene();
+	Robot* rob;
+	virtual void setGravity(int x, int y, int z);
+	void resetCamera();
+};
+
+
 class CommonExampleInterface*    BasicExampleCreateFunc(struct CommonExampleOptions& options);
 
 

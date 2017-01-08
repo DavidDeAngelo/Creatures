@@ -15,17 +15,9 @@ subject to the following restrictions:b
 
 
 #include "BasicExample.h"
-#include "RagDoll.h"
-#include "Robot.h"
-
-#include "btBulletDynamicsCommon.h"
-
-#include "LinearMath/btVector3.h"
-#include "LinearMath/btAlignedObjectArray.h"
-
-#include "../CommonInterfaces/CommonRigidBodyBase.h"
 
 
+/*
 struct BasicExample : public CommonRigidBodyBase
 {
 	BasicExample(struct GUIHelperInterface* helper)
@@ -37,6 +29,7 @@ struct BasicExample : public CommonRigidBodyBase
 	}
 	virtual void initPhysics();
 	virtual void renderScene();
+	Robot* rob;
 	virtual void setGravity(int x, int y, int z);
 	void resetCamera()
 	{
@@ -47,6 +40,25 @@ struct BasicExample : public CommonRigidBodyBase
 		m_guiHelper->resetCamera(dist,pitch,yaw,targetPos[0],targetPos[1],targetPos[2]);
 	}
 };
+*/
+BasicExample::BasicExample(struct GUIHelperInterface* helper)
+	:CommonRigidBodyBase(helper)
+{
+}
+
+BasicExample::~BasicExample() {
+	m_guiHelper->removeAllGraphicsInstances();
+	m_guiHelper->removeCurrentPhysicsDebugDrawer();
+}
+
+void BasicExample::resetCamera()
+{
+	float dist = 4;
+	float pitch = 52;
+	float yaw = 35;
+	float targetPos[3] = { 0,0,0 };
+	m_guiHelper->resetCamera(dist, pitch, yaw, targetPos[0], targetPos[1], targetPos[2]);
+}
 
 void BasicExample::initPhysics()
 {
@@ -96,12 +108,18 @@ void BasicExample::initPhysics()
 		bool isDynamic = (mass != 0.f);
 
 		btVector3 localInertia(0,0,0);
-	
+	    /*
+		auto_ptr<Robot> p(new Robot(m_dynamicsWorld, btVector3(
+			btScalar(0.2),
+			btScalar(2 + .2),
+			btScalar(0.2)), 1));
+		*/
+
 		Robot* ragdoll = new Robot(m_dynamicsWorld, btVector3(
 			btScalar(0.2),
 			btScalar(2 + .2),
 			btScalar(0.2)), 1);
-		delete ragdoll;
+		rob = ragdoll;
 		
 			
 	}

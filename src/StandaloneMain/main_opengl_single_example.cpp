@@ -33,6 +33,7 @@ subject to the following restrictions:
 
 #include "../CommonInterfaces/CommonExampleInterface.h"
 #include "../CommonInterfaces/CommonGUIHelperInterface.h"
+#include "../Creatures/BasicExample.h"
 #include "../Utils/b3Clock.h"
 #include <random>
 
@@ -45,7 +46,7 @@ subject to the following restrictions:
 #include <iostream>
 #include "../ExampleBrowser/OpenGLGuiHelper.h"
 
-CommonExampleInterface*    example;
+BasicExample*    example;
 int gSharedMemoryKey=-1;
 
 b3MouseMoveCallback prevMouseMoveCallback = 0;
@@ -110,15 +111,18 @@ int main(int argc, char* argv[])
 	CommonExampleOptions options(&gui);
 	
 	for (int i = 0; i < 10; i++){
-		example = StandaloneExampleCreateFunc(options);
+		//example = StandaloneExampleCreateFunc(options);
+		example = new BasicExample(&gui);
+
 		example->initPhysics();
 		example->resetCamera();
+		delete example->rob;
 		example->exitPhysics();
 		delete example;
 		
 	}
-	
-	example = StandaloneExampleCreateFunc(options);
+	example = new BasicExample(&gui);
+	//example = StandaloneExampleCreateFunc(options);
 	example->initPhysics();
 	example->resetCamera();
 
@@ -147,7 +151,9 @@ int main(int argc, char* argv[])
 		
 
 	} while (!app->m_window->requestedExit());
-
+	
+	
+	delete example->rob;
 	example->exitPhysics();
 	delete example;
 	delete app;

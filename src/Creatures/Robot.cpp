@@ -26,6 +26,8 @@ Robot::Robot(btDynamicsWorld* ownerWorld, const btVector3& positionOffset, btSca
 	transform.setIdentity();
 	transform.setOrigin(scale*btVector3(btScalar(1.), btScalar(.6), btScalar(1.)));
 	createBox(10, offset*transform, *box, 1);
+
+/*
 	for (int i = 0; i < 1000; i++) {
 		createBox(10, offset*transform, *box, 2);
 		deleteObject(2);
@@ -34,6 +36,8 @@ Robot::Robot(btDynamicsWorld* ownerWorld, const btVector3& positionOffset, btSca
 
 	deleteObject(1);
 	createBox(10, offset*transform, *box, 1);
+
+	*/
 	btTransform  trans = offset*transform;
 
 	btScalar x = trans.getOrigin().getX();
@@ -49,6 +53,7 @@ Robot::Robot(btDynamicsWorld* ownerWorld, const btVector3& positionOffset, btSca
 
 Robot::~Robot()
 {
+
 	for (size_t i = 0; i < m_bodies.size(); i++) {
 		if (m_bodies[i] != 0) {
 			m_ownerWorld->removeRigidBody(m_bodies[i]);
