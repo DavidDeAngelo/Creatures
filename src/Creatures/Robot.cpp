@@ -27,12 +27,12 @@ Robot::Robot(btDynamicsWorld* ownerWorld, const btVector3& positionOffset, btSca
 	transform.setOrigin(scale*btVector3(btScalar(1.), btScalar(.6), btScalar(1.)));
 	createBox(10, offset*transform, *box, 1);
 
-/*
+
 	for (int i = 0; i < 1000; i++) {
 		createBox(10, offset*transform, *box, 2);
 		deleteObject(2);
 	}
-
+/*
 
 	deleteObject(1);
 	createBox(10, offset*transform, *box, 1);
@@ -66,6 +66,12 @@ Robot::~Robot()
 	for (size_t i = 0; i < m_shapes.size(); i++) {
 		if (m_shapes[i] != 0) {
 			delete m_shapes[i]; m_shapes[i] = 0;
+		}
+	}
+
+	for (size_t i = 0; i < m_joints.size(); i++) {
+		if (m_shapes[i] != 0) {
+			delete m_joints[i]; m_joints[i] = 0;
 		}
 	}
 

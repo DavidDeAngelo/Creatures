@@ -218,12 +218,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Network.h" />
+    <ClInclude Include="neuron.h" />
     <ClInclude Include="src\Creatures\BasicExample.h" />
     <ClInclude Include="src\Creatures\RagDoll.h" />
     <ClInclude Include="src\Creatures\Robot.h" />
     <ClInclude Include="src\Utils\b3Clock.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Network.cpp" />
+    <ClCompile Include="neuron.cpp" />
     <ClCompile Include="src\Creatures\BasicExample.cpp" />
     <ClCompile Include="src\Creatures\RagDoll.cpp" />
     <ClCompile Include="src\Creatures\Robot.cpp" />

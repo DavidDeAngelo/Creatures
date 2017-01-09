@@ -36,6 +36,12 @@
     <ClInclude Include="src\Creatures\RagDoll.h">
       <Filter>examples\Creatures</Filter>
     </ClInclude>
+    <ClInclude Include="neuron.h">
+      <Filter>examples\Creatures</Filter>
+    </ClInclude>
+    <ClInclude Include="Network.h">
+      <Filter>examples\Creatures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Utils\b3Clock.cpp">
@@ -64,6 +70,12 @@
     </ClCompile>
     <ClCompile Include="src\ExampleBrowser\GL_ShapeDrawer.cpp">
       <Filter>examples\ExampleBrowser</Filter>
+    </ClCompile>
+    <ClCompile Include="neuron.cpp">
+      <Filter>examples\Creatures</Filter>
+    </ClCompile>
+    <ClCompile Include="Network.cpp">
+      <Filter>examples\Creatures</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

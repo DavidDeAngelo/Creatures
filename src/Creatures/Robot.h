@@ -18,7 +18,7 @@ public:
 	//btCollisionShape* m_shapes[BODYPART_COUNT];
 	vector<btCollisionShape*> m_shapes= vector<btCollisionShape*>(10);
 	vector<btRigidBody*> m_bodies= vector<btRigidBody*>(10);
-	vector<btTypedConstraint>* m_joints;
+	vector<btTypedConstraint*> m_joints;
 
 	
 	virtual ~Robot();
