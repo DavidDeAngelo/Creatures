@@ -68,18 +68,18 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bullet3-2.85.1\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">obj\x32\Release\App_BasicExampleGui\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">App_BasicExampleGui_vs2010</TargetName>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\bin\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\bullet3-2.85.1\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obj\x64\Release\App_BasicExampleGui\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">App_BasicExampleGui_vs2010_x64_release</TargetName>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bullet3-2.85.1\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">obj\x32\Debug\Creatures\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\bin\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\bullet3-2.85.1\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obj\x64\Debug\App_BasicExampleGui\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">App_BasicExampleGui_vs2010_x64_debug</TargetName>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
@@ -91,7 +91,7 @@
     <ClCompile>
       <AdditionalOptions>/MP /wd4244 /wd4267 %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\bullet3-2.85.1\src;src\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
@@ -107,10 +107,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\src;..\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\bullet3-2.85.1\src;src\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>..\bin\BulletDynamics_vs2010.lib;..\bin\BulletCollision_vs2010.lib;..\bin\LinearMath_vs2010.lib;..\bin\OpenGL_Window_vs2010.lib;..\bin\Bullet3Common_vs2010.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\bullet3-2.85.1\bin\BulletDynamics_vs2010.lib;..\bullet3-2.85.1\bin\BulletCollision_vs2010.lib;..\bullet3-2.85.1\bin\LinearMath_vs2010.lib;..\bullet3-2.85.1\bin\OpenGL_Window_vs2010.lib;..\bullet3-2.85.1\bin\Bullet3Common_vs2010.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)App_BasicExampleGui_vs2010.exe</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
@@ -125,7 +125,7 @@
     <ClCompile>
       <AdditionalOptions>/MP /wd4244 /wd4267 %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\bullet3-2.85.1\src;src\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
@@ -141,10 +141,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\src;..\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\bullet3-2.85.1\src;src\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>..\bin\BulletDynamics_vs2010_x64_release.lib;..\bin\BulletCollision_vs2010_x64_release.lib;..\bin\LinearMath_vs2010_x64_release.lib;..\bin\OpenGL_Window_vs2010_x64_release.lib;..\bin\Bullet3Common_vs2010_x64_release.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\bullet3-2.85.1\bin\BulletDynamics_vs2010_x64_release.lib;..\bullet3-2.85.1\bin\BulletCollision_vs2010_x64_release.lib;..\bullet3-2.85.1\bin\LinearMath_vs2010_x64_release.lib;..\bullet3-2.85.1\bin\OpenGL_Window_vs2010_x64_release.lib;..\bullet3-2.85.1\bin\Bullet3Common_vs2010_x64_release.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)App_BasicExampleGui_vs2010_x64_release.exe</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
@@ -159,7 +159,7 @@
     <ClCompile>
       <AdditionalOptions>/MP /wd4244 /wd4267 %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\examples\BasicDemo;..\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\bullet3-2.85.1\src;src\examples\BasicDemo;src\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG=1;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -174,10 +174,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG=1;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\src;..\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\bullet3-2.85.1\src;src\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>..\bin\BulletDynamics_vs2010_debug.lib;..\bin\BulletCollision_vs2010_debug.lib;..\bin\LinearMath_vs2010_debug.lib;..\bin\OpenGL_Window_vs2010_debug.lib;..\bin\Bullet3Common_vs2010_debug.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\bullet3-2.85.1\bin\BulletDynamics_vs2010_debug.lib;..\bullet3-2.85.1\bin\BulletCollision_vs2010_debug.lib;..\bullet3-2.85.1\bin\LinearMath_vs2010_debug.lib;..\bullet3-2.85.1\bin\OpenGL_Window_vs2010_debug.lib;..\bullet3-2.85.1\bin\Bullet3Common_vs2010_debug.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)Creatures.exe</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
@@ -190,7 +190,7 @@
     <ClCompile>
       <AdditionalOptions>/MP /wd4244 /wd4267 %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\bullet3-2.85.1\src;src\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG=1;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -205,10 +205,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG=1;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\src;..\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\bullet3-2.85.1\src;src\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>..\bin\BulletDynamics_vs2010_x64_debug.lib;..\bin\BulletCollision_vs2010_x64_debug.lib;..\bin\LinearMath_vs2010_x64_debug.lib;..\bin\OpenGL_Window_vs2010_x64_debug.lib;..\bin\Bullet3Common_vs2010_x64_debug.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\bullet3-2.85.1\bin\BulletDynamics_vs2010_x64_debug.lib;..\bullet3-2.85.1\bin\BulletCollision_vs2010_x64_debug.lib;..\bullet3-2.85.1\bin\LinearMath_vs2010_x64_debug.lib;..\bullet3-2.85.1\bin\OpenGL_Window_vs2010_x64_debug.lib;..\bullet3-2.85.1\bin\Bullet3Common_vs2010_x64_debug.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)App_BasicExampleGui_vs2010_x64_debug.exe</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
@@ -223,6 +223,9 @@
     <ClInclude Include="src\Creatures\BasicExample.h" />
     <ClInclude Include="src\Creatures\RagDoll.h" />
     <ClInclude Include="src\Creatures\Robot.h" />
+    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\glew.h" />
+    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\glxew.h" />
+    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\wglew.h" />
     <ClInclude Include="src\Utils\b3Clock.h" />
   </ItemGroup>
   <ItemGroup>

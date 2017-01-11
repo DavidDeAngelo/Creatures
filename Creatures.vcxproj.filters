@@ -22,6 +22,9 @@
     <Filter Include="examples\Creatures">
       <UniqueIdentifier>{79839BF9-EF5E-1941-8A43-2E573F4979D6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="examples\ThirdPartyLibs\Glew\CustomGL">
+      <UniqueIdentifier>{af298696-5b83-4470-9404-1b6b1c7a7318}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Utils\b3Clock.h">
@@ -41,6 +44,15 @@
     </ClInclude>
     <ClInclude Include="Network.h">
       <Filter>examples\Creatures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\glew.h">
+      <Filter>examples\ThirdPartyLibs\Glew\CustomGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\glxew.h">
+      <Filter>examples\ThirdPartyLibs\Glew\CustomGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\wglew.h">
+      <Filter>examples\ThirdPartyLibs\Glew\CustomGL</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
