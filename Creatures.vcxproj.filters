@@ -1,93 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="examples">
-      <UniqueIdentifier>{559D924D-4FAB-3D4F-975B-4214FDDAB265}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{CF180AD9-D62B-9545-8D18-297848C846C9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="examples\ThirdPartyLibs\Glew">
-      <UniqueIdentifier>{64F90EDE-A909-1C40-A95E-933F70572C7F}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="examples\StandaloneMain">
-      <UniqueIdentifier>{8CF29A5D-971A-1647-88CE-9AD27E877634}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="examples\ExampleBrowser">
-      <UniqueIdentifier>{682C99C0-C1F5-ED4A-8278-6EC1A871E7C9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="examples\Utils">
-      <UniqueIdentifier>{4B11749A-9F15-3546-B67A-34009375EEE3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="examples\Creatures">
-      <UniqueIdentifier>{79839BF9-EF5E-1941-8A43-2E573F4979D6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="examples\ThirdPartyLibs\Glew\CustomGL">
-      <UniqueIdentifier>{af298696-5b83-4470-9404-1b6b1c7a7318}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Utils\b3Clock.h">
-      <Filter>examples\Utils</Filter>
+    <ClInclude Include="Project Files\Utils\b3Clock.h">
+      <Filter>Support Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Creatures\BasicExample.h">
-      <Filter>examples\Creatures</Filter>
+    <ClInclude Include="Project Files\ThirdPartyLibs\Glew\CustomGL\glew.h">
+      <Filter>Support Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Creatures\Robot.h">
-      <Filter>examples\Creatures</Filter>
+    <ClInclude Include="Project Files\ThirdPartyLibs\Glew\CustomGL\glxew.h">
+      <Filter>Support Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Creatures\RagDoll.h">
-      <Filter>examples\Creatures</Filter>
+    <ClInclude Include="Project Files\ThirdPartyLibs\Glew\CustomGL\wglew.h">
+      <Filter>Support Files</Filter>
     </ClInclude>
-    <ClInclude Include="neuron.h">
-      <Filter>examples\Creatures</Filter>
+    <ClInclude Include="Project Files\Creatures\BasicExample.h">
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="Network.h">
-      <Filter>examples\Creatures</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\glew.h">
-      <Filter>examples\ThirdPartyLibs\Glew\CustomGL</Filter>
+    <ClInclude Include="neuron.h">
+      <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\glxew.h">
-      <Filter>examples\ThirdPartyLibs\Glew\CustomGL</Filter>
+    <ClInclude Include="Project Files\Creatures\RagDoll.h">
+      <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="src\ThirdPartyLibs\Glew\CustomGL\wglew.h">
-      <Filter>examples\ThirdPartyLibs\Glew\CustomGL</Filter>
+    <ClInclude Include="Project Files\Creatures\Robot.h">
+      <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Utils\b3Clock.cpp">
-      <Filter>examples\Utils</Filter>
+    <ClCompile Include="Project Files\Utils\b3Clock.cpp">
+      <Filter>Support Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Creatures\BasicExample.cpp">
-      <Filter>examples\Creatures</Filter>
+    <ClCompile Include="Project Files\ExampleBrowser\CollisionShape2TriangleMesh.cpp">
+      <Filter>Support Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Creatures\Robot.cpp">
-      <Filter>examples\Creatures</Filter>
+    <ClCompile Include="Project Files\ExampleBrowser\GL_ShapeDrawer.cpp">
+      <Filter>Support Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Creatures\RagDoll.cpp">
-      <Filter>examples\Creatures</Filter>
+    <ClCompile Include="Project Files\ThirdPartyLibs\Glew\glew.c">
+      <Filter>Support Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ThirdPartyLibs\Glew\glew.c">
-      <Filter>examples\ThirdPartyLibs\Glew</Filter>
+    <ClCompile Include="Project Files\StandaloneMain\main_opengl_single_example.cpp">
+      <Filter>Support Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ExampleBrowser\CollisionShape2TriangleMesh.cpp">
-      <Filter>examples\ExampleBrowser</Filter>
+    <ClCompile Include="Project Files\ExampleBrowser\OpenGLGuiHelper.cpp">
+      <Filter>Support Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\StandaloneMain\main_opengl_single_example.cpp">
-      <Filter>examples\StandaloneMain</Filter>
+    <ClCompile Include="Project Files\Creatures\BasicExample.cpp">
+      <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="src\ExampleBrowser\OpenGLGuiHelper.cpp">
-      <Filter>examples\ExampleBrowser</Filter>
+    <ClCompile Include="Project Files\Creatures\Robot.cpp">
+      <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="src\ExampleBrowser\GL_ShapeDrawer.cpp">
-      <Filter>examples\ExampleBrowser</Filter>
+    <ClCompile Include="Project Files\Creatures\RagDoll.cpp">
+      <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="neuron.cpp">
-      <Filter>examples\Creatures</Filter>
+      <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Network.cpp">
-      <Filter>examples\Creatures</Filter>
+      <Filter>Src</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{3fdfe8b3-acce-4417-958a-a72512bd5257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{0b7b7f3c-0cf1-421f-bf80-9ac5ac4e3021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Support Files">
+      <UniqueIdentifier>{fe11e296-b44f-45b7-8b96-99cc6bda4966}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
