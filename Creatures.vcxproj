@@ -87,6 +87,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>Creatures</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../boost_1_63_0</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalOptions>/MP /wd4244 /wd4267 %(AdditionalOptions)</AdditionalOptions>
@@ -220,7 +223,7 @@
   <ItemGroup>
     <ClInclude Include="Network.h" />
     <ClInclude Include="neuron.h" />
-    <ClInclude Include="Project Files\Creatures\BasicExample.h" />
+    <ClInclude Include="Project Files\Creatures\Experiment.h" />
     <ClInclude Include="Project Files\Creatures\RagDoll.h" />
     <ClInclude Include="Project Files\Creatures\Robot.h" />
     <ClInclude Include="Project Files\ThirdPartyLibs\Glew\CustomGL\glew.h" />
@@ -231,7 +234,7 @@
   <ItemGroup>
     <ClCompile Include="Network.cpp" />
     <ClCompile Include="neuron.cpp" />
-    <ClCompile Include="Project Files\Creatures\BasicExample.cpp" />
+    <ClCompile Include="Project Files\Creatures\Experiment.cpp" />
     <ClCompile Include="Project Files\Creatures\RagDoll.cpp" />
     <ClCompile Include="Project Files\Creatures\Robot.cpp" />
     <ClCompile Include="Project Files\ThirdPartyLibs\Glew\glew.c">

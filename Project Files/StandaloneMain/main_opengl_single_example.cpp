@@ -13,7 +13,7 @@ subject to the following restrictions:
 3. This notice may not be removed or altered from any source distribution.
 */
 #include<vld.h>
-
+#include"../../Network.h"
 /*
 #define _CRTDBG_MAP_ALLOC
 #include <cstdlib>
@@ -33,7 +33,7 @@ subject to the following restrictions:
 
 #include "../CommonInterfaces/CommonExampleInterface.h"
 #include "../CommonInterfaces/CommonGUIHelperInterface.h"
-#include "../Creatures/BasicExample.h"
+#include "../Creatures/Experiment.h"
 #include "../Utils/b3Clock.h"
 #include <random>
 
@@ -46,7 +46,7 @@ subject to the following restrictions:
 #include <iostream>
 #include "../ExampleBrowser/OpenGLGuiHelper.h"
 
-BasicExample*    example;
+Experiment*    example;
 int gSharedMemoryKey=-1;
 
 b3MouseMoveCallback prevMouseMoveCallback = 0;
@@ -95,7 +95,7 @@ int main(int argc, char* argv[])
 	std::uniform_int_distribution<int> uniform_dist(-10, 10);
 	int mean = uniform_dist(e1);
 	*/
-
+	GenericNEAT::Network net = GenericNEAT::Network();
 	SimpleOpenGL3App* app = new SimpleOpenGL3App("Creatures",1024,768,true);
 	
 	prevMouseButtonCallback = app->m_window->getMouseButtonCallback();
@@ -110,9 +110,9 @@ int main(int argc, char* argv[])
 
 	CommonExampleOptions options(&gui);
 	
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < 2; i++){
 		//example = StandaloneExampleCreateFunc(options);
-		example = new BasicExample(&gui);
+		example = new Experiment(&gui);
 
 		example->initPhysics();
 		example->resetCamera();
@@ -121,7 +121,7 @@ int main(int argc, char* argv[])
 		delete example;
 		
 	}
-	example = new BasicExample(&gui);
+	example = new Experiment(&gui);
 	//example = StandaloneExampleCreateFunc(options);
 	example->initPhysics();
 	example->resetCamera();

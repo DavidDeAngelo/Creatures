@@ -16,10 +16,9 @@ subject to the following restrictions:
 #ifndef BASIC_EXAMPLE_H
 #define BASIC_EXAMPLE_H
 
-#include "BasicExample.h"
 #include "RagDoll.h"
 #include "Robot.h"
-#include <memory>
+//#include <memory>
 
 #include "btBulletDynamicsCommon.h"
 
@@ -28,11 +27,11 @@ subject to the following restrictions:
 
 #include "../CommonInterfaces/CommonRigidBodyBase.h"
 
-struct BasicExample : public CommonRigidBodyBase
+struct Experiment : public CommonRigidBodyBase
 {
 
-	BasicExample(struct GUIHelperInterface* helper);
-	virtual ~BasicExample();
+	Experiment(struct GUIHelperInterface* helper);
+	virtual ~Experiment();
 	virtual void initPhysics();
 	virtual void renderScene();
 	Robot* rob;

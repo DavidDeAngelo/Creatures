@@ -14,17 +14,17 @@ subject to the following restrictions:b
 */
 
 
-#include "BasicExample.h"
+#include "Experiment.h"
 
 
 /*
-struct BasicExample : public CommonRigidBodyBase
+struct Experiment : public CommonRigidBodyBase
 {
-	BasicExample(struct GUIHelperInterface* helper)
+	Experiment(struct GUIHelperInterface* helper)
 		:CommonRigidBodyBase(helper)
 	{
 	}
-	virtual ~BasicExample(){
+	virtual ~Experiment(){
 		m_guiHelper->removeCurrentPhysicsDebugDrawer();
 	}
 	virtual void initPhysics();
@@ -41,17 +41,17 @@ struct BasicExample : public CommonRigidBodyBase
 	}
 };
 */
-BasicExample::BasicExample(struct GUIHelperInterface* helper)
+Experiment::Experiment(struct GUIHelperInterface* helper)
 	:CommonRigidBodyBase(helper)
 {
 }
 
-BasicExample::~BasicExample() {
+Experiment::~Experiment() {
 	m_guiHelper->removeAllGraphicsInstances();
 	m_guiHelper->removeCurrentPhysicsDebugDrawer();
 }
 
-void BasicExample::resetCamera()
+void Experiment::resetCamera()
 {
 	float dist = 4;
 	float pitch = 52;
@@ -60,7 +60,7 @@ void BasicExample::resetCamera()
 	m_guiHelper->resetCamera(dist, pitch, yaw, targetPos[0], targetPos[1], targetPos[2]);
 }
 
-void BasicExample::initPhysics()
+void Experiment::initPhysics()
 {
 	m_guiHelper->setUpAxis(1);
 
@@ -130,14 +130,14 @@ void BasicExample::initPhysics()
 }
 
 
-void BasicExample::renderScene()
+void Experiment::renderScene()
 {
 	CommonRigidBodyBase::renderScene();
 	
 }
 
 
-void BasicExample::setGravity(int x, int y, int z) {
+void Experiment::setGravity(int x, int y, int z) {
 	m_dynamicsWorld->setGravity(btVector3(x, y, z));
 }
 
@@ -146,7 +146,7 @@ void BasicExample::setGravity(int x, int y, int z) {
 
 CommonExampleInterface*    BasicExampleCreateFunc(CommonExampleOptions& options)
 {
-	return new BasicExample(options.m_guiHelper);
+	return new Experiment(options.m_guiHelper);
 
 }
 

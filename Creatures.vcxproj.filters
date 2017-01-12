@@ -13,9 +13,6 @@
     <ClInclude Include="Project Files\ThirdPartyLibs\Glew\CustomGL\wglew.h">
       <Filter>Support Files</Filter>
     </ClInclude>
-    <ClInclude Include="Project Files\Creatures\BasicExample.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Network.h">
       <Filter>Headers</Filter>
     </ClInclude>
@@ -26,6 +23,9 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="Project Files\Creatures\Robot.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Project Files\Creatures\Experiment.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
@@ -42,14 +42,8 @@
     <ClCompile Include="Project Files\ThirdPartyLibs\Glew\glew.c">
       <Filter>Support Files</Filter>
     </ClCompile>
-    <ClCompile Include="Project Files\StandaloneMain\main_opengl_single_example.cpp">
-      <Filter>Support Files</Filter>
-    </ClCompile>
     <ClCompile Include="Project Files\ExampleBrowser\OpenGLGuiHelper.cpp">
       <Filter>Support Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Project Files\Creatures\BasicExample.cpp">
-      <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Project Files\Creatures\Robot.cpp">
       <Filter>Src</Filter>
@@ -61,6 +55,12 @@
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Network.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Project Files\StandaloneMain\main_opengl_single_example.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Project Files\Creatures\Experiment.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
