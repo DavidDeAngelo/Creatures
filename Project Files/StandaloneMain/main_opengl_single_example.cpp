@@ -141,7 +141,8 @@ int main(int argc, char* argv[])
 
 		btScalar dtSec = btScalar(clock.getTimeInSeconds());
 		example->stepSimulation(dtSec);
-	  	clock.reset();
+		//example->stepSimulation(1.0 / 60.0);
+		clock.reset();
 
 		example->renderScene();
 		DrawGridData dg;

@@ -13,8 +13,8 @@ subject to the following restrictions:
 3. This notice may not be removed or altered from any source distribution.
 */
 
-#ifndef BASIC_EXAMPLE_H
-#define BASIC_EXAMPLE_H
+#ifndef EXPERIMENT_H
+#define EXPERIMENT_H
 
 #include "RagDoll.h"
 #include "Robot.h"

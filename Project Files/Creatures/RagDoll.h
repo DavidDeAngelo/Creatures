@@ -1,6 +1,5 @@
-#pragma once
-
-
+#ifndef RAGDALL_H
+#define RAGDALL_H
 
 #include "btBulletDynamicsCommon.h"
 #include <stdio.h> //printf debugging
@@ -66,3 +65,5 @@ public:
 	RagDoll(btDynamicsWorld* ownerWorld, const btVector3& positionOffset, btScalar scale);
 	virtual ~RagDoll();
 };
+
+#endif

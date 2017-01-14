@@ -1,4 +1,7 @@
 #pragma once
+#ifndef ROBOT_H
+#define ROBOT_H
+
 #include "btBulletDynamicsCommon.h"
 #include <stdio.h> //printf debugging
 #include "BulletCollision/BroadphaseCollision/btDbvtBroadphase.h"
@@ -28,3 +31,4 @@ public:
 	void deleteObject(int index);
 };
 
+#endif

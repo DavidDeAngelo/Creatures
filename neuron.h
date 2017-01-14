@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GN_NEURON_H
+#define GN_NEURON_H
+
 namespace GenericNEAT {
 
 	class neuron
@@ -8,3 +10,4 @@ namespace GenericNEAT {
 		~neuron();
 	};
 }
+#endif
