@@ -12,7 +12,7 @@ subject to the following restrictions:
 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source distribution.
 */
-#include<vld.h>
+//#include<vld.h>
 #include"../../Network.h"
 /*
 #define _CRTDBG_MAP_ALLOC
@@ -73,6 +73,18 @@ static void OnMouseDown(int button, int state, float x, float y) {
 	}
 }
 
+b3KeyboardCallback prevKeyPress = 0;
+static void OnKeyPress(int button, int state) {
+	bool handled = false;
+	handled = example->keyboardCallback(button, state);
+	if (!handled)
+	{
+		if (prevKeyPress)
+			prevKeyPress(button, state);
+	}
+}
+
+
 class LessDummyGuiHelper : public DummyGUIHelper
 {
 	CommonGraphicsApp* m_app;
@@ -89,21 +101,21 @@ public:
 };
 int main(int argc, char* argv[])
 {
-	/*
-	std::random_device r;
-	std::default_random_engine e1(r());
-	std::uniform_int_distribution<int> uniform_dist(-10, 10);
-	int mean = uniform_dist(e1);
-	*/
+	b3Clock clock;
+
+	unsigned long int mApplicationStart = clock.getTimeInSeconds();
+
+
 	GenericNEAT::Network net = GenericNEAT::Network();
 	SimpleOpenGL3App* app = new SimpleOpenGL3App("Creatures",1024,768,true);
 	
 	prevMouseButtonCallback = app->m_window->getMouseButtonCallback();
 	prevMouseMoveCallback = app->m_window->getMouseMoveCallback();
+	prevKeyPress = app->m_window->getKeyboardCallback();
 
 	app->m_window->setMouseButtonCallback((b3MouseButtonCallback)OnMouseDown);
 	app->m_window->setMouseMoveCallback((b3MouseMoveCallback)OnMouseMove);
-	
+	app->m_window->setKeyboardCallback((b3KeyboardCallback)OnKeyPress);
 	OpenGLGuiHelper gui(app,false);
 	//LessDummyGuiHelper gui(app);
 	//DummyGUIHelper gui;
@@ -131,7 +143,7 @@ int main(int argc, char* argv[])
 
 
 
-	b3Clock clock;
+	
 
 	do
 	{
@@ -141,6 +153,7 @@ int main(int argc, char* argv[])
 
 		btScalar dtSec = btScalar(clock.getTimeInSeconds());
 		example->stepSimulation(dtSec);
+		//example->stepSimulation(duration, max_sub_step, simulation_step_size)
 		//example->stepSimulation(1.0 / 60.0);
 		clock.reset();
 

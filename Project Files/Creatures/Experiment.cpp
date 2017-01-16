@@ -13,6 +13,7 @@ subject to the following restrictions:b
 3. This notice may not be removed or altered from any source distribution.
 */
 
+#define EXPERIMENT_PAUSE 112
 
 #include "Experiment.h"
 
@@ -137,12 +138,29 @@ void Experiment::renderScene()
 }
 
 
+
 void Experiment::setGravity(int x, int y, int z) {
 	m_dynamicsWorld->setGravity(btVector3(x, y, z));
 }
 
+bool Experiment::keyboardCallback(int key, int state) {
+	if ((key == EXPERIMENT_PAUSE) && state && m_dynamicsWorld)
+	{
+		isPaused = !isPaused;
+		return true;
+	}
+	
 
+	return CommonRigidBodyBase::keyboardCallback(key, state);
+}
 
+void Experiment::stepSimulation(float deltaTime)
+{
+	if (m_dynamicsWorld && !isPaused)
+	{
+		m_dynamicsWorld->stepSimulation(deltaTime);
+	}
+}
 
 CommonExampleInterface*    BasicExampleCreateFunc(CommonExampleOptions& options)
 {

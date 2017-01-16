@@ -36,7 +36,12 @@ struct Experiment : public CommonRigidBodyBase
 	virtual void renderScene();
 	Robot* rob;
 	virtual void setGravity(int x, int y, int z);
+	virtual bool keyboardCallback(int key, int state);
+	virtual void stepSimulation(float deltaTime);
 	void resetCamera();
+
+	private:
+		bool isPaused=false;
 };
 
 
